@@ -13,3 +13,22 @@
   object-fit: contain;
   max-width: 400px;
 }
+
+.password-input {
+  position: relative;
+}
+
+.password-eye-btn {
+  position: absolute;
+  top: 53%;
+  right: 12px;
+  //transform: translateY(-50%);
+  background: yellowgreen;
+  border: none;
+  color: #ffffffbf;
+  cursor: pointer;
+}
+
+.password-eye-btn.active {
+  color: var(--primary-color);
+}

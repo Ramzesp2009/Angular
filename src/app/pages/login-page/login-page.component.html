@@ -1,0 +1,62 @@
+<form
+  class="login-form"
+  [formGroup]="form"
+  (ngSubmit)="onSubmit()"
+>
+  <h1 class="h1 mb60">Welcome</h1>
+
+  <label class="tt-control-label mb16">
+    Username
+    <input
+      formControlName="username"
+      class="tt-input"
+      type="text"
+      placeholder="Enter username">
+  </label>
+
+  <label class="tt-control-label mb32">
+    Password
+    <span class="password-input">
+      <input
+        formControlName="password"
+        class="tt-input"
+        [type]="isPasswordVisible() ? 'text' : 'password'"
+        placeholder="Enter password"
+      >
+      <button
+        class="password-eye-btn"
+        [class.active]="isPasswordVisible()"
+        (click)="isPasswordVisible.set(!isPasswordVisible())"
+      >
+        <svg width="19" height="19" viewBox="0 0 6500 5000">
+          <path d="M1931 4332 c-66 -67 -121 -125 -121 -129 0 -4 127 -135 281 -289
+                  l282 -282 -34 -17 c-137 -71 -461 -307 -649 -473 -163 -144 -425 -409 -535
+                  -542 l-87 -105 49 -43 c286 -257 674 -517 1028 -691 367 -181 713 -290 1090
+                  -343 119 -17 542 -17 657 0 121 18 318 57 408 82 41 11 95 25 119 31 l43 12
+                  309 -309 309 -309 125 125 125 125 -252 253 c-176 177 -248 256 -238 260 38
+                  13 384 193 455 237 146 88 307 197 445 300 154 116 315 256 315 273 0 19 -163
+                  210 -304 355 -509 523 -1069 889 -1595 1042 -223 64 -430 90 -656 82 -239 -9
+                  -444 -50 -683 -139 l-110 -40 -327 327 -328 328 -121 -121z m1856 -588 c529
+                  -109 902 -612 852 -1149 -11 -109 -28 -190 -61 -275 -26 -69 -92 -197 -118
+                  -230 l-19 -25 -129 129 -130 128 34 73 c45 97 64 182 64 287 0 85 -15 185 -30
+                  201 -4 5 -20 -7 -35 -25 -70 -84 -195 -137 -295 -125 -165 20 -296 155 -308
+                  318 -7 107 25 185 115 280 l45 46 -69 14 c-146 29 -297 10 -436 -53 l-68 -32
+                  -127 127 c-145 145 -144 130 -19 200 210 120 487 162 734 111z m-860 -740
+                  c-187 -370 -9 -827 383 -982 88 -34 148 -45 260 -45 116 0 181 14 293 65 l68
+                  32 130 -130 129 -129 -22 -18 c-46 -36 -245 -127 -323 -147 -222 -57 -435 -47
+                  -644 29 -336 123 -585 398 -678 749 -34 128 -39 362 -9 486 30 132 85 262 149
+                  355 l30 43 129 -129 130 -130 -25 -49z"
+                fill="currentColor"
+                fill-opacity="0.75"/>
+        </svg>
+      </button>
+    </span>
+  </label>
+
+
+  <button class="btn btn-shadow" type="submit">Enter</button>
+</form>
+
+<img class="tik-talk-logo" src="/assets/svg/logo-big.png" alt="logo">
+
+
